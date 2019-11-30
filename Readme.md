@@ -1,6 +1,6 @@
 # AssemblyScript in TypeScript
 
-## How to set up
+## How to reproduce setup
 1. `npm init`
 2. `npm i -S typescript @types/node assemblyscript`
 3. `npx tsc --init`
@@ -31,4 +31,5 @@
 
 ## To read
 https://docs.assemblyscript.org/quick-start
+
 https://www.joyent.com/blog/improved-wasm-support-coming-to-node
