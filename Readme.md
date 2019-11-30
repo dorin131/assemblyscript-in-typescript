@@ -1,9 +1,10 @@
-## How to use AssemblyScript in TypeScript
+# AssemblyScript in TypeScript
 
-1. npm init
-2. npm i -S typescript @types/node assemblyscript
-3. npx tsc --init
-4. npx asinit .
+## How to set up
+1. `npm init`
+2. `npm i -S typescript @types/node assemblyscript`
+3. `npx tsc --init`
+4. `npx asinit .`
 5. In tsconfig.json add
 ```
 "compilerOptions": {
@@ -23,7 +24,11 @@
 ```
 7. Rename index.js to loader.ts, add any missing types and export the webassembly instance to be used from other files
 
+## How to run
+1. `npm run build`
+2. `npm start`
 
-To Read:
+
+## To read
 https://docs.assemblyscript.org/quick-start
 https://www.joyent.com/blog/improved-wasm-support-coming-to-node
