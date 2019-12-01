@@ -26,7 +26,7 @@
  (export "__release" (func $~lib/rt/pure/__release))
  (export "__collect" (func $~lib/rt/pure/__collect))
  (export "__rtti_base" (global $~lib/rt/__rtti_base))
- (export "add" (func $assembly/index/add))
+ (export "fibonacci" (func $assembly/index/fibonacci))
  (func $~lib/rt/tlsf/removeBlock (; 1 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -1755,10 +1755,30 @@
    call $~lib/rt/pure/decrement
   end
  )
- (func $assembly/index/add (; 26 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $assembly/index/fibonacci (; 26 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
-  local.get $1
-  i32.add
+  i32.const 1
+  i32.lt_s
+  if (result i32)
+   i32.const 0
+  else
+   local.get $0
+   i32.const 2
+   i32.le_s
+   if (result i32)
+    i32.const 1
+   else
+    local.get $0
+    i32.const 1
+    i32.sub
+    call $assembly/index/fibonacci
+    local.get $0
+    i32.const 2
+    i32.sub
+    call $assembly/index/fibonacci
+    i32.add
+   end
+  end
  )
  (func $~lib/rt/pure/__visit (; 27 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   local.get $0

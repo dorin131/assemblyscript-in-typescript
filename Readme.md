@@ -20,7 +20,7 @@
 ```
 "start": "node --experimental-modules --experimental-wasm-modules ./dist/index.js",
 "build": "npm run asbuild && tsc -p ./tsconfig.json && npm run copy",
-"copy": "cp -r build dist/build/",
+"copy": "rm -rf dist/build/ && cp -r build dist/build/",
 ```
 7. Rename index.js to loader.ts, add any missing types and export the webassembly instance to be used from other files
 
