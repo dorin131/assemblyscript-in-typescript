@@ -15,11 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^3.7.2"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "assemblyscript": "^0.8.1"
+    "@types/node": "^12.12.31",
+    "assemblyscript": "^0.9.4",
     "shx": "^0.3.2"
   }
 }
